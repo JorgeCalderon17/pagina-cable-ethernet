@@ -1,0 +1,340 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://i.pinimg.com/236x/d0/dd/de/d0ddde1c2883d91cf585ee7189169adc.jpg");
+    background-size: cover;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    animation: moveBackground 60s linear infinite; /* Añade la animación de fondo */
+}
+
+/* Definición de la animación */
+@keyframes moveBackground {
+    0% {
+        background-position: 40% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Estilo para el menú de navegación */
+nav {
+    background: linear-gradient(#0a0b3a, #830101, #0a0b3a); /* Color de fondo del menú */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px; /* Espaciado interno del menú */
+    position: fixed; /* Fija el menú en la parte superior */
+    width: 100%; /* Ancho completo del menú */
+    top: 0; /* Coloca el menú en la parte superior */
+    left: 0; /* Coloca el menú en el borde izquierdo */
+    z-index: 1000; /* Asegura que el menú esté encima de otros elementos */
+    animation: fadeIn 5s ease-in-out; /* Añade una animación de desvanecimiento */
+    display: flex; /* Usa flexbox para alinear el contenido */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: space-between; /* Distribuye espacio entre los elementos */
+}
+
+/* Estilos para el menú desplegable */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a, .dropbtn {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover, .dropdown:hover .dropbtn {
+    background-color: #03030367;
+}
+
+/* Estilos para el contenido del dropdown */
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001; /* Asegura que el dropdown esté sobre el menú */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostrar el contenido del dropdown al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos para el header */
+.header {
+    padding-top: 100px; /* Añadir padding superior para que el contenido no quede tapado por el menú */
+    padding: 25px; /* Añadir padding en los otros lados si es necesario */
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ff000077;
+    text-align: center;
+}
+
+/* Estilo para el contenido del header */
+header {
+    margin-top: 60px; /* Ajusta este valor según la altura del menú */
+    text-align: center; /* Centra el texto dentro del header */
+    background: linear-gradient(to right,  #10006b,  #790101); /* Fondo degradado */
+    padding: 20px; /* Añadir padding */
+    color: #fff; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para h1 y h2 */
+header h1, header h2 {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    display: inline-block; /* Permite que estén en la misma línea */
+    vertical-align: middle; /* Alinea verticalmente */
+}
+
+/* Ajusta el espaciado entre h1 y h2 */
+header h1 {
+    margin-right: 10px; /* Ajusta el espacio entre h1 y h2 */
+    display: inline-block; /* Permite que estén en la misma línea */
+    vertical-align: middle; /* Alinea verticalmente */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #10006b6b; /* Color de fondo sólido */
+    color: #fff; /* Color del texto */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilos para el footer */
+.footer {
+    margin-top: auto; /* Empuja el pie de página hacia el fondo del contenedor */
+    text-align: center;
+    padding: 10px;
+    background-color: #0a0b3a;
+    color: #f1f1f1;
+    border: 2px solid red; /* Borde temporal para visualizar */
+}
+
+.main-content h2 {
+    text-align: left; /* Centra el texto */
+    font-size: 2em; /* Aumenta el tamaño de la fuente */
+    margin-bottom: 20px; /* Añade margen inferior para separar del siguiente contenido */
+    color: #f1f1f1;
+}
+
+.main-content ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    text-align: center; /* Centra el texto */
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+    color: #f1f1f1;
+}
+
+.main-content ul li {
+    margin: 10px 0; /* Añade margen vertical entre los elementos de la lista */
+}
+
+.main-content p {
+    text-align: left; /* Centra el texto */
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+    margin-top: 20px; /* Añade margen superior */
+    color: #f1f1f1;
+}
+
+/* Asegúrate de que el contenedor de la lista no tenga estilos de lista predeterminados */
+.icon-list {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+/* Alinea el contenido dentro de los elementos de la lista */
+.icon-list li {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    align-items: center; /* Alinea verticalmente el contenido */
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+    font-size: 1.2em; /* Tamaño de la fuente */
+}
+
+/* Ajusta el tamaño de las imágenes */
+.icon-list .icon {
+    width: 50px; /* Ancho de la imagen, ajusta según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Contenedor para el texto y el video */
+.main-content {
+    display: flex; /* Usa flexbox para alinear el contenido */
+    align-items: flex-start; /* Alinea el contenido en la parte superior */
+    gap: 20px; /* Espacio entre el contenido de texto y el video */
+    padding: 20px; /* Añadir padding alrededor del contenedor */
+}
+
+.media-video {
+    width: 300px;
+    height: auto;
+}
+
+.media-video {
+    width: 350px;
+    height: auto;
+}
+
+/* Animación de escala al pasar el ratón */
+.image-animate {
+    transition: transform 0.5s ease;
+}
+
+.image-animate:hover {
+    transform: scale(1.1);
+}
+
+/* Animación de opacidad */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.image-animate {
+    animation: fadeIn 5s ease-in;
+}
+
+/* Animación de desplazamiento desde arriba */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header {
+    animation: slideInFromTop 1s ease-out;
+}
+
+/* Animación de escala al pasar el ratón */
+.header h1, .header h2 {
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.header h1:hover {
+    transform: scale(1.1);
+    color: #860000; /* Cambia el color al pasar el ratón */
+}
+
+.header h2:hover {
+    transform: scale(1.05);
+    color: #860000; /* Cambia el color al pasar el ratón */
+}
+
+h3 {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 2em; /* Aumenta el tamaño del texto; puedes ajustar el valor */
+    margin: 0 auto; /* Centra el párrafo si se le aplica un ancho */
+    padding: 10px; /* Espaciado interno si es necesario */
+    color: #fff; /* Color del texto */
+}
+
+/* Ocultar las opciones adicionales */
+.hidden {
+    display: none;
+}
+
+/* Estilo para la imagen debajo del menú */
+.menu-image {
+    display: block;
+    margin: 10px auto; /* Ajusta el margen según tus necesidades */
+    width: 40px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilos para el enlace de contacto */
+.contact-link {
+    text-align: center;
+    margin-top: px;
+}
+
+.contact-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link a:hover {
+    text-decoration: underline;
+}
+
+.contact-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.contact-link a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el enlace en el address */
+address a {
+    display: inline-block;
+    margin-bottom: 20px; /* Espacio adicional debajo del enlace */
+}
+
+/* Contenedor de la imagen centrada */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la imagen centrada */
+.qr-image {
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.arrow {
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #ffffff; /* Cambia el color según tu diseño */
+    margin: 10px auto; /* Centra la flecha horizontalmente */
+}
